@@ -3,7 +3,7 @@ Un-*** 50 billions multimodality dataset
 
 ## Reasoning
 
-We previously discovered more than 300 Billion different images on Common Crawl dumps. Our initial approach was to use CLIP for filtering samples with enough similarity between the image and text, to create both LAION-400m and LAION-5B datasets. This might have introduced certain biases into the filtered datasets. As we have used a pre-trained openAI CLIP model of certain scale (ViT B/32), the biases may also depend on the particular choice of the scale. 
+We previously discovered more than 300 Billion different images on Common Crawl dumps. Our initial approach was to use CLIP for filtering data, selecting only samples with enough similarity between the image and text, to create both LAION-400m and LAION-5B datasets. This might have introduced certain biases into the filtered datasets. As we have used a pre-trained openAI CLIP model of certain scale (ViT B/32), the biases may also depend on the particular choice of the scale. 
 
 We also took other design decisions that we aim now to correct in order to better capture the available data and offer researchers a base dataset of un-CLIPped samples, we estimate at some 50 billions for image-text modalities. Researchers will be able then to identify and measure CLIP biases and come up with different methods of sampling the unfiltered base dataset for future models needs. Specifically, it will also become possible to see the effect of model scale (eg, CLIP B/32, B/16, L/14, etc) selected for filtering on the biases and quality of the resulting subsets.
 
